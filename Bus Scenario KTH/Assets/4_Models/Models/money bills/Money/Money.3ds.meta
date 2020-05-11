@@ -1,0 +1,252 @@
+fileFormatVersion: 2
+guid: 128c307d8a0c7954eb8bc6ac664db182
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: 1 Dollar
+    100002: 10 canada $
+    100004: 10 euros
+    100006: 10 Rubley
+    100008: 100 dollars
+    100010: 100 euros
+    100012: 100 rubley
+    100014: 1000 rubley
+    100016: 10000000 pengo
+    100018: 20 canada dollars
+    100020: 20 euros
+    100022: 20 pounds
+    100024: 5 canada $
+    100026: 5 euros
+    100028: 5 pounds
+    100030: 50 euros
+    100032: 50 pounds
+    100034: 5000 rubley
+    100036: //RootNode
+    100038: Plane
+    100040: Plane.1
+    100042: Plane.2
+    100044: Plane.3
+    100046: Plane.4
+    100048: Plane.5
+    400000: 1 Dollar
+    400002: 10 canada $
+    400004: 10 euros
+    400006: 10 Rubley
+    400008: 100 dollars
+    400010: 100 euros
+    400012: 100 rubley
+    400014: 1000 rubley
+    400016: 10000000 pengo
+    400018: 20 canada dollars
+    400020: 20 euros
+    400022: 20 pounds
+    400024: 5 canada $
+    400026: 5 euros
+    400028: 5 pounds
+    400030: 50 euros
+    400032: 50 pounds
+    400034: 5000 rubley
+    400036: //RootNode
+    400038: Plane
+    400040: Plane.1
+    400042: Plane.2
+    400044: Plane.3
+    400046: Plane.4
+    400048: Plane.5
+    2100000: 100 d front
+    2100002: 100 d back
+    2100004: 10 r front
+    2100006: 10 r back
+    2100008: 100 dollars front
+    2100010: 100 dollars back
+    2100012: 5000 rubley front
+    2100014: 5000 rubley back
+    2100016: 1000 rubley front
+    2100018: 1000 rubley back
+    2100020: 100 rubley front
+    2100022: 100 rubley back
+    2100024: 10 000 000 p front
+    2100026: 10000000 pengo back
+    2100028: 50 eu front
+    2100030: 50 eur back
+    2100032: 100 eur front
+    2100034: 100 eur back.2
+    2100036: 10 eur front
+    2100038: 1o eur back
+    2100040: 20 e front
+    2100042: 20 eur back
+    2100044: 5 eur front
+    2100046: 5 eu back
+    2100048: 50 po front
+    2100050: 50 po back
+    2100052: 5 poundsfront
+    2100054: 5po back
+    2100056: 20 po front
+    2100058: 20 po back
+    2100060: 5 canada $ front
+    2100062: 5 can $ back
+    2100064: 10 can $ front
+    2100066: 10can$back
+    2100068: 20can$ front
+    2100070: 20c$ back
+    2100072: Velvet
+    2100074: Velvet.2
+    2100076: Velvet.3
+    2100078: Velvet.4
+    2100080: Velvet.5
+    2100082: Velvet.6
+    2300000: 1 Dollar
+    2300002: 10 canada $
+    2300004: 10 euros
+    2300006: 10 Rubley
+    2300008: 100 dollars
+    2300010: 100 euros
+    2300012: 100 rubley
+    2300014: 1000 rubley
+    2300016: 10000000 pengo
+    2300018: 20 canada dollars
+    2300020: 20 euros
+    2300022: 20 pounds
+    2300024: 5 canada $
+    2300026: 5 euros
+    2300028: 5 pounds
+    2300030: 50 euros
+    2300032: 50 pounds
+    2300034: 5000 rubley
+    2300036: Plane
+    2300038: Plane.1
+    2300040: Plane.2
+    2300042: Plane.3
+    2300044: Plane.4
+    2300046: Plane.5
+    3300000: 1 Dollar
+    3300002: 10 canada $
+    3300004: 10 euros
+    3300006: 10 Rubley
+    3300008: 100 dollars
+    3300010: 100 euros
+    3300012: 100 rubley
+    3300014: 1000 rubley
+    3300016: 10000000 pengo
+    3300018: 20 canada dollars
+    3300020: 20 euros
+    3300022: 20 pounds
+    3300024: 5 canada $
+    3300026: 5 euros
+    3300028: 5 pounds
+    3300030: 50 euros
+    3300032: 50 pounds
+    3300034: 5000 rubley
+    3300036: Plane
+    3300038: Plane.1
+    3300040: Plane.2
+    3300042: Plane.3
+    3300044: Plane.4
+    3300046: Plane.5
+    4300000: 1 Dollar
+    4300002: 5 canada $
+    4300004: 10 canada $
+    4300006: 20 canada dollars
+    4300008: 50 pounds
+    4300010: 5 pounds
+    4300012: 20 pounds
+    4300014: 5 euros
+    4300016: 20 euros
+    4300018: 50 euros
+    4300020: 10 euros
+    4300022: 100 euros
+    4300024: 10000000 pengo
+    4300026: 100 rubley
+    4300028: 1000 rubley
+    4300030: 5000 rubley
+    4300032: 100 dollars
+    4300034: 10 Rubley
+    4300036: Plane
+    4300038: Plane.1
+    4300040: Plane.2
+    4300042: Plane.3
+    4300044: Plane.4
+    4300046: Plane.5
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

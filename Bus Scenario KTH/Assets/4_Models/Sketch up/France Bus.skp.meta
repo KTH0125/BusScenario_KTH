@@ -1,0 +1,409 @@
+fileFormatVersion: 2
+guid: 98544b18d9ed6724e824c317f63e7a45
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 777d0f1d408b694200eb51e9f5ee1147
+  longitude: -105.242139
+  latitude: 40.018309
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 131.15442, y: 27.752234, z: 87.383934}
+      lookAt: {x: 122.00932, y: 11.070288, z: 46.46502}
+      up: {x: -0.08063228, y: 0.9291584, z: -0.3607814}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: 30
+    100002: 50
+    100004: 90
+    100006: B4
+    100008: //RootNode
+    100010: JOE#1
+    100012: JOE#2
+    100014: RO
+    100016: RO#1
+    100018: SM 17 PGS
+    100020: SM 17 PGS 1
+    400000: 30
+    400002: 50
+    400004: 90
+    400006: B4
+    400008: //RootNode
+    400010: JOE#1
+    400012: JOE#2
+    400014: RO
+    400016: RO#1
+    400018: SM 17 PGS
+    400020: SM 17 PGS 1
+    2100000: _defaultMat
+    2100002: '[Color_008]'
+    2100004: _9
+    2100006: 96,96,96
+    2100008: '[0135_DarkGray]'
+    2100010: '[Chipboard]'
+    2100012: _Charcoal_
+    2100014: _LightGray_
+    2100016: '[Color_009]'
+    2100018: '[Color_000]'
+    2100020: '[Color I06]'
+    2100022: '[Blue]'
+    2100024: '[Color_E02]'
+    2100026: _7
+    2100028: _8
+    2100030: '[Color_F11]'
+    2100032: '[Color_D01]'
+    2100034: '[Color_004]'
+    2100036: '[Color_006]'
+    2100038: '[Color_007]'
+    2100040: '[Color_005]'
+    2100042: '[Blinds_Vertical_Stripe_Gray]'
+    2100044: '[Brown]'
+    2100046: '[Color_003]'
+    2100048: _3
+    2100050: '[Translucent_Glass_Gray]'
+    2100052: '[Color_B01]'
+    2100054: '[Blinds_Cellular_White]'
+    2100056: _5
+    2100058: _4
+    2100060: black
+    2100062: '[Color_002]'
+    2100064: _6
+    2100066: _10
+    2100068: _11
+    2100070: '[Color_G07]'
+    2100072: '[Color D05]'
+    2300000: 30
+    2300002: 50
+    2300004: 90
+    2300006: B4
+    2300008: //RootNode
+    2300010: JOE#1
+    2300012: JOE#2
+    2300014: RO
+    2300016: RO#1
+    2300018: SM 17 PGS
+    2300020: SM 17 PGS 1
+    3300000: 30
+    3300002: 50
+    3300004: 90
+    3300006: B4
+    3300008: //RootNode
+    3300010: JOE#1
+    3300012: JOE#2
+    3300014: RO
+    3300016: RO#1
+    3300018: SM 17 PGS
+    3300020: SM 17 PGS 1
+    4300000: Mesh France Bus
+    4300002: Mesh 30
+    4300004: Mesh SM 17 PGS
+    4300006: Mesh 50
+    4300008: Mesh 90
+    4300010: Mesh RO#1
+    4300012: Mesh JOE#2
+    4300014: Mesh RO
+    4300016: Mesh JOE#1
+    4300018: Mesh B4
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 96,96,96
+    second: {fileID: 2100000, guid: 7e1432f502f602746a8ef2770cf30953, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[0135_DarkGray]'
+    second: {fileID: 2100000, guid: 277efde83880c9148a596106152f72de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Blinds_Cellular_White]'
+    second: {fileID: 2100000, guid: 3fbadf1d55427e04a92d3128bc59e5fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Blinds_Vertical_Stripe_Gray]'
+    second: {fileID: 2100000, guid: 8c4211d064acb034d97baf16122b2db3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Blue]'
+    second: {fileID: 2100000, guid: 3b7b7913f2d781742ad82964b0e3e28e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Brown]'
+    second: {fileID: 2100000, guid: 448cf353e0e6f954e873fa6919bb8315, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Chipboard]'
+    second: {fileID: 2100000, guid: 8f5d2accd5452ac498180c572f3c833f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Color D05]'
+    second: {fileID: 2100000, guid: c035847cd4d7d754499bdede24166fb6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Color I06]'
+    second: {fileID: 2100000, guid: f6ededef1a59f6c4e92156951f3b7367, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Color_000]'
+    second: {fileID: 2100000, guid: 2e46e4d2492c3334eba8d9e60bbcd1ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Color_002]'
+    second: {fileID: 2100000, guid: 8b4877e8233b5624b8256927151e14d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Color_003]'
+    second: {fileID: 2100000, guid: da46a541459525a40b5208d2854ddb24, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Color_004]'
+    second: {fileID: 2100000, guid: e11c3f8a900acd2448ccab85b324b169, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Color_005]'
+    second: {fileID: 2100000, guid: c80dcf4d267573443a8ea8d30303cfc3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Color_006]'
+    second: {fileID: 2100000, guid: 6b2b239141f22bc4a888227166955478, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Color_007]'
+    second: {fileID: 2100000, guid: 7a86f9422d9ee8f4c85453ee858061cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Color_008]'
+    second: {fileID: 2100000, guid: 2187d7e14fb331b4699c6d3db21bd1ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Color_009]'
+    second: {fileID: 2100000, guid: f587ed8d49116884db867b9fe553e6db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Color_B01]'
+    second: {fileID: 2100000, guid: f71c90ea0fcd9104997b7e2f6431df70, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Color_D01]'
+    second: {fileID: 2100000, guid: b50826d8f6f0ff545840b44605186e5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Color_E02]'
+    second: {fileID: 2100000, guid: 14c4b7dfc8726ed449f8e2e80edf948d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Color_F11]'
+    second: {fileID: 2100000, guid: 6aed8975f495b534d8ac3d37671415d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Color_G07]'
+    second: {fileID: 2100000, guid: 3eddf795c2879f44fa57fc030a62072c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Translucent_Glass_Gray]'
+    second: {fileID: 2100000, guid: 33d867e274e39594896365dbea87789a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _10
+    second: {fileID: 2100000, guid: b0fecb9c1e84f7748815acf6779147b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _11
+    second: {fileID: 2100000, guid: 1349d90ae9069de46ab8bbeb6d44792d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _3
+    second: {fileID: 2100000, guid: 7ba9a3dce6997684bb0a3326bf32be33, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _4
+    second: {fileID: 2100000, guid: 27c9a4c5687dda4499cb7e5225c89e16, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _5
+    second: {fileID: 2100000, guid: ce0193b1b30373d438a962062d173078, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _6
+    second: {fileID: 2100000, guid: 4d436f59f11ee1d409402222a46f9fe7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _7
+    second: {fileID: 2100000, guid: d1ce9369df3cf75408bd854788ea2ab3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _8
+    second: {fileID: 2100000, guid: e83fb0a47e3f91144a8c239b79bec52a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _9
+    second: {fileID: 2100000, guid: 5e9785cacec4de742a161d9708108c1b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Charcoal_
+    second: {fileID: 2100000, guid: dc7d8a731ae83de41a5db9ea11abebed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _LightGray_
+    second: {fileID: 2100000, guid: 8130c84f8ec4a164c9092b1c3ba9dfcd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _defaultMat
+    second: {fileID: 2100000, guid: 21844a39ada269146b858bfc3b34e9b0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: black
+    second: {fileID: 2100000, guid: 098e53839985f424f8f3bc893408a855, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Blinds_Cellular_White
+    second: {fileID: 2800000, guid: ea54ebfc2fc4a3347a45a406d88c8ff5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Blinds_Roman_Hobbled_Blue
+    second: {fileID: 2800000, guid: ae75e6ddac28c2c44b6bcda84e729f11, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Blinds_Vertical_Stripe_Gray
+    second: {fileID: 2800000, guid: 97e5c35f366eb4a4e9e0ed4ad1b4e617, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Carpet_Plush_Forest
+    second: {fileID: 2800000, guid: 6cccd1df845554b44b87c80a4165e0e5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: images
+    second: {fileID: 2800000, guid: 870996102920b524286ccd6af90e8d34, type: 3}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
