@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 494}
   m_MaxSize: {x: 18008, y: 14044}
   vertical: 0
-  controlID: 135
+  controlID: 142
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 436, y: 494}
   m_MaxSize: {x: 14006, y: 14044}
   vertical: 1
-  controlID: 31
+  controlID: 55
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 222}
   m_MaxSize: {x: 8006, y: 4022}
   vertical: 0
-  controlID: 32
+  controlID: 56
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -211,8 +211,8 @@ MonoBehaviour:
     y: 0
     width: 295
     height: 653
-  m_MinSize: {x: 204, y: 222}
-  m_MaxSize: {x: 4004, y: 4022}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_MinSize: {x: 436, y: 272}
   m_MaxSize: {x: 14006, y: 10022}
   vertical: 0
-  controlID: 62
+  controlID: 76
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -263,8 +263,8 @@ MonoBehaviour:
     y: 0
     width: 902
     height: 294
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 222}
+  m_MaxSize: {x: 4002, y: 4022}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -315,8 +315,8 @@ MonoBehaviour:
     y: 0
     width: 552
     height: 947
-  m_MinSize: {x: 277, y: 72}
-  m_MaxSize: {x: 4002, y: 4022}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -431,7 +431,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: f0ed4ce7c424b23499fffe878291cff8
-  m_Gizmos: 1
+  m_Gizmos: 0
   m_SceneIsLit: 1
   m_SceneLighting: 1
   m_2DMode: 0
@@ -439,9 +439,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 72.85807, y: 3.0905793, z: 118.39722}
+    m_Target: {x: 21.527275, y: 0.112514496, z: -10.896117}
     speed: 2
-    m_Value: {x: 72.85807, y: 3.0905793, z: 118.39722}
+    m_Value: {x: 21.527275, y: 0.112514496, z: -10.896117}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -470,13 +470,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.017692622, y: -0.075746626, z: -0.00063313945, w: -0.9969901}
+    m_Target: {x: -0.029698746, y: -0.90897846, z: 0.0675036, w: -0.4103247}
     speed: 2
-    m_Value: {x: 0.016196793, y: -0.07574596, z: -0.0005194993, w: -0.99699545}
+    m_Value: {x: -0.02969805, y: -0.9089571, z: 0.067502014, w: -0.41031507}
   m_Size:
-    m_Target: 8.5318985
+    m_Target: 61.706566
     speed: 2
-    m_Value: 8.933926
+    m_Value: 61.706566
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -559,18 +559,18 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: aee8ffffcae8ffff70fbffff325c0000a4650000746600003a6e00008e700000
+      m_ExpandedIDs: 3850feff4657feffdc63feff148ffeffa0cafeff0e26ffffc257ffff567affff5280000030830000188400002684000008970000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Game master
-        m_OriginalName: Game master
+        m_Name: G18E
+        m_OriginalName: G18E
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 23220
+        m_UserData: 36652
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -648,20 +648,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/2_Scripts/Scripts
+    - Assets/4_Models/Sketch up/Materials
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/2_Scripts/Scripts
+  - Assets/4_Models/Sketch up/Materials
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\admin-user\Desktop\TH\BusScenario_KTH\Bus Scenario KTH
+  m_LastProjectPath: "C:\\Users\\kitoo\\OneDrive\\\uBB38\uC11C\\GitHub\\BusScenario_KTH\\Bus
+    Scenario KTH"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d44f0000
-    m_LastClickedID: 20436
-    m_ExpandedIDs: 00000000923200009e320000ae330000c2330000803400003c350000603800008c400000724200007c420000f0450000ca47000052480000664e000064500000965000000a51000000ca9a3b
+    scrollPos: {x: 0, y: 285}
+    m_SelectedIDs: 74710000
+    m_LastClickedID: 29044
+    m_ExpandedIDs: 00000000306700003c6700000c6800001c6800009c6800000a6b0000166b00002c7200006c7200009e730000a873000032760000cc7700003a780000407d00000e7f00003a7f0000967f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -689,7 +690,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000923200009e320000ae330000c233000080340000603800008c400000724200007c420000f0450000ca47000052480000664e000064500000965000000a510000
+    m_ExpandedIDs: 00000000306700003c6700000c6800001c6800009c680000166b00002c7200009e730000a873000032760000cc7700003a780000407d00000e7f00003a7f0000967f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -720,18 +721,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c6230000d83a00009232000094320000083900001841000000000000463c000060390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: GameMaster
-      m_OriginalName: GameMaster
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 11538
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 12}
     m_CreateAssetUtility:
@@ -741,10 +742,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 40.5}
+    m_ScrollPosition: {x: 0, y: 290}
     m_GridSize: 16
   m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 112
+  m_DirectoriesAreaWidth: 189
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
