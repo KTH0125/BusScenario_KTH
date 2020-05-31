@@ -112,7 +112,7 @@ public class GameMaster : MonoBehaviour
     private Bus currentBus;
     private string sollicitationToLog;
 
-    public TicketMachine ticketMachine;
+    public TicketMachine2 ticketMachine;
     
     /// <summary>
     /// Manages the sequences of the game

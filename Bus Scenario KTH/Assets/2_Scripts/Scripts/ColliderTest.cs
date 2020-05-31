@@ -10,7 +10,7 @@ public class ColliderTest : MonoBehaviour {
     private Text headScreenText;
    
 
-    public TicketMachine M;
+    public TicketMachine2 M;
     private String StringColor;
 
     public string playerName;
