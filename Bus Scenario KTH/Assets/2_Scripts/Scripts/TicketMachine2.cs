@@ -107,7 +107,7 @@ public class TicketMachine2 : MonoBehaviour
 
         if (collider.gameObject.tag == "TicketButton")
         {
-            caseSwitch = "selectTicket";
+            //caseSwitch = "selectTicket";
             caseSwitch = "selectZone";
 
         }
@@ -224,6 +224,53 @@ public class TicketMachine2 : MonoBehaviour
 
         switch (caseSwitch)
         {
+            case "selectZone":
+
+                if (collider.gameObject.tag == "TicketButton")
+                /* {
+                     if (collider.gameObject.name == "VRWhiteButton")
+                     {
+
+                         collider.GetComponent<Renderer>().material.color = whiteButtonColor;
+                         sollicitationToLog += GlobalTime.globalTime + ", " + playerName + ", Sélectionne, Bouton Blanc\n";
+
+                     }*/
+                {
+                    if (collider.gameObject.name == "VRZone1button")
+                    {
+
+                        collider.GetComponent<Renderer>().material.color = blueButtonColor;
+                        sollicitationToLog += GlobalTime.globalTime + ", " + playerName + ", Sélectionne, Bouton Bleu\n";
+
+                    }
+                    else if (collider.gameObject.name == "VRZone2button")
+                    {
+
+                        collider.GetComponent<Renderer>().material.color = redButtonColor;
+                        sollicitationToLog += GlobalTime.globalTime + ", " + playerName + ", Sélectionne, Bouton Rouge\n";
+
+                    }
+
+                    else if (collider.gameObject.name == "VRZone3buttonn")
+                    {
+
+                        collider.GetComponent<Renderer>().material.color = greenButtonColor;
+                        sollicitationToLog += GlobalTime.globalTime + ", " + playerName + ", Sélectionne, Bouton Vert\n";
+
+                    }
+
+                    /*else if (collider.gameObject.name == "VRYellowButton")
+                    {
+
+                        collider.GetComponent<Renderer>().material.color = yellowButtonColor;
+                        sollicitationToLog += GlobalTime.globalTime + ", " + playerName + ", Sélectionne, Bouton Jaune\n";
+
+                    }*/
+                    textScreen.text = ticketColor + " sélectionné.\n" + "Validez pour confirmer.";
+                    caseSwitch = "selectTicke";
+                }
+                break;
+
             case "selectTicket":
 
                 if (collider.gameObject.tag == "TicketButton")
