@@ -15856,7 +15856,7 @@ GameObject:
   - component: {fileID: 547499992}
   m_Layer: 5
   m_Name: TicketSelect
-  m_TagString: Ticketselect
+  m_TagString: tickettext
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17779,7 +17779,7 @@ GameObject:
   - component: {fileID: 636198792}
   m_Layer: 5
   m_Name: ZoneSelect
-  m_TagString: Zoneselect
+  m_TagString: zonetext
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61180,8 +61180,8 @@ GameObject:
   - component: {fileID: 892442403995923894}
   - component: {fileID: 892442403984963692}
   - component: {fileID: 892442403995680535}
-  - component: {fileID: 892442403995680534}
   - component: {fileID: 892442403995680533}
+  - component: {fileID: 892442403995680534}
   - component: {fileID: 892442403995680532}
   - component: {fileID: 892442403995680531}
   - component: {fileID: 892442403995680530}

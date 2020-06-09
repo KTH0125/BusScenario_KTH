@@ -19,6 +19,10 @@ TagManager:
   - TargetPoint
   - Zoneselect
   - Ticketselect
+  - FxTemporaire
+  - projectile
+  - zonetext
+  - tickettext
   layers:
   - Default
   - TransparentFX
