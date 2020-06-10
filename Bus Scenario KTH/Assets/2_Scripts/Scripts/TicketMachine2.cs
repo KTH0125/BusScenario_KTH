@@ -270,7 +270,7 @@ public class TicketMachine2 : MonoBehaviour
                     }*/
                     textScreen.text = zone + " sélectionné.\n" + "Choisissez un billet.";
                     zonetext.text = zone;
-                    caseSwitch = "selectTicke";
+                    caseSwitch = "selectTicket";
                 }
                 break;
 
