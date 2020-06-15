@@ -189,9 +189,9 @@ namespace Lean.Localization
 		/// <summary>This sets the current language using the specified index based on the Languages list, where 0 is the first language.</summary>
 		public void SetCurrentLanguage(int newLanguageIndex)
 		{
-			if (newLanguageIndex >= 0 && newLanguageIndex < Instances.Count)
+			if (newLanguageIndex >= 0 && newLanguageIndex < languages.Count)
 			{
-				SetCurrentLanguage(Instances[newLanguageIndex].name);
+				SetCurrentLanguage(languages[newLanguageIndex].Name);
 			}
 		}
 
