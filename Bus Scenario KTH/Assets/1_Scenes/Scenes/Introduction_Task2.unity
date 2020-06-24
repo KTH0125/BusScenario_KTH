@@ -376,7 +376,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "2 \uB2E8\uACC4"
+  m_Text: Step 2
 --- !u!222 &416604033
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -439,6 +439,71 @@ MonoBehaviour:
   - Language: Korean
     Text: "\uC2E4\uD5D8 \uAC00\uC774\uB4DC"
     Object: {fileID: 0}
+--- !u!1 &495494046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 495494048}
+  - component: {fileID: 495494047}
+  m_Layer: 0
+  m_Name: Task2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!328 &495494047
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495494046}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: b3e8399999b13b7418cb5b5fa20bbf35, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 636686921}
+  m_TargetTexture: {fileID: 8400000, guid: c41d05179bb88844880e037c1717a17c, type: 2}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: _MainTex
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 1
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+--- !u!4 &495494048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495494046}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &515531243
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,7 +523,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &515531244
 RectTransform:
   m_ObjectHideFlags: 0
@@ -754,6 +819,7 @@ RectTransform:
   - {fileID: 869988827}
   - {fileID: 515531244}
   - {fileID: 1849516305}
+  - {fileID: 860997208}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -983,11 +1049,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "- \uD2F0\uCF13 \uD310\uB9E4\uAE30\uB97C \uCC3E\uAE30\uC73C\uC138\uC694.\n\r\n-
-    \uBAA9\uC801\uC9C0\uC758 \uAD6C\uC5ED\uC744 \uC120\uD0DD\uD558\uC138\uC694.\r\n\r\n-
-    \uBC84\uC2A4\uC758 \uC885\uB958\uB97C \uC120\uD0DD\r\uD558\uC138\uC694.\n\r\n-
-    \uD655\uC778 \uBC84\uD2BC\uC744 \uB204\uB974\uC138\uC694.\r\n\r\n- \uACB0\uC81C\uC218\uB2E8\uC744
-    \uC0AC\uC6A9\uD558\uC138\uC694.\r\n\r\n-\uD2F0\uCF13 \uC9D1\uC73C\uC138\uC694."
+  m_Text: "- Find the ticket machine.\r\n\n- Select the area of your destination.\r\n\n-
+    Choose the route of the bus.\r\n\n- Press the OK button.\r\n\n- Use payment method.\r\n\n-
+    Pick up your ticket."
 --- !u!222 &725642157
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1073,6 +1137,76 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 819309507}
   m_CullTransparentMesh: 0
+--- !u!1 &860997207
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 860997208}
+  - component: {fileID: 860997210}
+  - component: {fileID: 860997209}
+  m_Layer: 5
+  m_Name: RawImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &860997208
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860997207}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 19, y: 19, z: 19}
+  m_Children: []
+  m_Father: {fileID: 554003034}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 205, y: -4}
+  m_SizeDelta: {x: 16, y: 9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &860997209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860997207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 8400000, guid: c41d05179bb88844880e037c1717a17c, type: 2}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &860997210
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860997207}
+  m_CullTransparentMesh: 0
 --- !u!1 &869988826
 GameObject:
   m_ObjectHideFlags: 0
@@ -1092,7 +1226,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &869988827
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1649,7 +1783,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1849516305
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1982,7 +2116,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC2E4\uD5D8 \uAC00\uC774\uB4DC"
+  m_Text: Experiment Guide
 --- !u!222 &1991099023
 CanvasRenderer:
   m_ObjectHideFlags: 0

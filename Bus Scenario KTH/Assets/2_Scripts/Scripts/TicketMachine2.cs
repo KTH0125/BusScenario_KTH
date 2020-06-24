@@ -22,14 +22,14 @@ public class TicketMachine2 : MonoBehaviour
     private Text tickettext;//show the 'ticket' that user choosen
 
     private string ticketColor;
+    private string caseSwitch;
+    private string playerName;
+    private string zone;
     private string selectTicket;
     private string validateTicket;
     private string payTicket;
     private string getTicket;
-    private string caseSwitch;
-    private string playerName;
     private string selectZone;
-    private string zone;
 
 
 
@@ -174,6 +174,7 @@ public class TicketMachine2 : MonoBehaviour
                     print("VD_In");
                 }
                 break;
+
             case "payTicket":
                 if (collider.gameObject.tag == "TerminalPayment")
                 {
@@ -212,16 +213,16 @@ public class TicketMachine2 : MonoBehaviour
                     else if ((collider.gameObject.tag == "ZoneButton") && (collider.gameObject.name == "VRZone2button"))
                     {
                         collider.GetComponent<Renderer>().material.color = whiteButtonColor;
-                    zonetext.text = "Zone2";
-                    print("z2_Out");
-                }
+                        zonetext.text = "Zone2";
+                        print("z2_Out");
+                    }
 
                     else if ((collider.gameObject.tag == "ZoneButton") && (collider.gameObject.name == "VRZone3buttonn"))
                     {
                         collider.GetComponent<Renderer>().material.color = whiteButtonColor;
-                    zonetext.text = "Zone3";
-                    print("z3_Out");
-                }
+                        zonetext.text = "Zone3";
+                        print("z3_Out");
+                    }
 
                     textScreen.text = zone + " sélectionné.\n" + "Choisissez un billet.";
                 //caseSwitch = "selectTicket";
@@ -231,18 +232,11 @@ public class TicketMachine2 : MonoBehaviour
             case "selectTicket":
 
                 if (collider.gameObject.tag == "TicketButton")
-                /* {
-                     if (collider.gameObject.name == "VRWhiteButton")
-                     {
-
-                         collider.GetComponent<Renderer>().material.color = whiteButtonColor;
-                         sollicitationToLog += GlobalTime.globalTime + ", " + playerName + ", Sélectionne, Bouton Blanc\n";
-
-                     }*/
                 {
                     if (collider.gameObject.name == "VRBlueButton")
                     {
                         tickettext.text = "Bleu";
+                        ticketColor = "Ticket bleu";
                         collider.GetComponent<Renderer>().material.color = blueButtonColor;
                         sollicitationToLog += GlobalTime.globalTime + ", " + playerName + ", Sélectionne, Bouton Bleu\n";
                         print("BT_Out");
@@ -250,9 +244,9 @@ public class TicketMachine2 : MonoBehaviour
                     }
                     else if (collider.gameObject.name == "VRRedButton")
                     {
-
-                        collider.GetComponent<Renderer>().material.color = redButtonColor;
                         tickettext.text = "Rouge";
+                        ticketColor = "Ticket rouge";
+                        collider.GetComponent<Renderer>().material.color = redButtonColor;
                         sollicitationToLog += GlobalTime.globalTime + ", " + playerName + ", Sélectionne, Bouton Rouge\n";
                         print("RT_Out");
 
@@ -260,23 +254,15 @@ public class TicketMachine2 : MonoBehaviour
 
                     else if (collider.gameObject.name == "VRGreenButton")
                     {
-
+                        tickettext.text = "Vert";
+                        ticketColor = "Ticket vert";
                         collider.GetComponent<Renderer>().material.color = greenButtonColor;
                         sollicitationToLog += GlobalTime.globalTime + ", " + playerName + ", Sélectionne, Bouton Vert\n";
                         print("GT_Out");
 
                     }
 
-                    /*else if (collider.gameObject.name == "VRYellowButton")
-                    {
-
-                        collider.GetComponent<Renderer>().material.color = yellowButtonColor;
-                        sollicitationToLog += GlobalTime.globalTime + ", " + playerName + ", Sélectionne, Bouton Jaune\n";
-
-                    }*/
                     textScreen.text = ticketColor + " sélectionné.\n" + "Validez pour confirmer.";
-                    tickettext.text = ticketColor;
-                   //caseSwitch = "validateTicket";
                 }
                 break;
 
@@ -290,7 +276,6 @@ public class TicketMachine2 : MonoBehaviour
                     sollicitationToLog += GlobalTime.globalTime + ", " + playerName + ", Sélectionne, Bouton Valider\n";
                     StartCoroutine(CardPaymentAppear());
                     print("VD_Out");
-
 
                 }
 
