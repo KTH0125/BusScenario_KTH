@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/1_Scenes/Scenes/Introduction_Task2.unity
+- path: Assets/1_Scenes/Scenes/IADL_BUS.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

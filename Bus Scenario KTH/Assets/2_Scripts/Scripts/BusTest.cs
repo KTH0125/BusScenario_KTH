@@ -23,7 +23,7 @@ public class BusTest : MonoBehaviour
     
 
     private Vector3 initialPos;
-    private Vector3 busStop = new Vector3(72.736f, 0f, 118.836f);
+    private Vector3 busStop = new Vector3(70.45f, 0f, 116.66f);
     /*private Vector3 otherBusStop=new Vector3(18.33f, 0f, 105.98f);*/
     private float speed = -17f;
 
@@ -33,7 +33,7 @@ public class BusTest : MonoBehaviour
 
     {
         initialPos = transform.position;
-        transform.position = new Vector3(172.61f, GetComponent<Transform>().position.y, 131.67f);
+        transform.position = new Vector3(-25.9f, GetComponent<Transform>().position.y, 116.66f);
         Starttime = Time.time;
     }
 
@@ -64,7 +64,7 @@ public class BusTest : MonoBehaviour
         {*/
         //player lane
         //pre-turn
-        while (transform.position.z > 115.9f)
+        while (transform.position.z > 116.66f)
 
         {
             transform.Translate(0, 0, speed * Time.deltaTime, Space.World);
@@ -137,7 +137,7 @@ public class BusTest : MonoBehaviour
 
         //player lane
 
-        while (transform.position.x > -187.93f)
+        while (transform.position.x > 173.4f)
 
         {
 
