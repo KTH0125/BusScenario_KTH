@@ -106,19 +106,10 @@ public class TicketMachine2 : MonoBehaviour
     private void OnTriggerEnter(Collider collider)
     {
       
-        if (collider.gameObject.tag == "TicketButton")
-        {
-            caseSwitch = "selectTicket";
-
-        }
-        else if(collider.gameObject.tag == "ZoneButton")
+        if (collider.gameObject.tag == "ZoneButton")
         {
             caseSwitch = "selectZone";
-        }
 
-        else if (collider.gameObject.tag == "ValidateButton")
-        {
-            caseSwitch = "validateTicket";
         }
 
 
@@ -225,7 +216,7 @@ public class TicketMachine2 : MonoBehaviour
                     }
 
                     textScreen.text = zone + " sélectionné.\n" + "Choisissez un billet.";
-                //caseSwitch = "selectTicket";
+                    caseSwitch = "selectTicket";
                                   
                 break;
 
@@ -263,6 +254,7 @@ public class TicketMachine2 : MonoBehaviour
                     }
 
                     textScreen.text = ticketColor + " sélectionné.\n" + "Validez pour confirmer.";
+                    caseSwitch = "validateTicket";
                 }
                 break;
 

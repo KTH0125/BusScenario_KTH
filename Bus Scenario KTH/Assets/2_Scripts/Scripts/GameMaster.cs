@@ -441,7 +441,7 @@ public class GameMaster : MonoBehaviour
         File.AppendAllText(pathPlayerResults, playerResultsData, Encoding.UTF8);
 
         //Logs actions related to the vending Machine
-        ticketMachine.EndLog();
+        //ticketMachine.EndLog();
 
         //Logs all objects that were grabbed
        // controllerHitGrabObject.EndLog();

@@ -20,6 +20,8 @@ public class SteamVR_PlayArea : MonoBehaviour
 	public enum Size
 	{
 		Calibrated,
+		_50000x50000,
+		_1500x500,
 		_400x300,
 		_300x225,
 		_200x150
