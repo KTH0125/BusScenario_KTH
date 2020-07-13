@@ -109,7 +109,7 @@ public class GameMaster : MonoBehaviour
 
     private bool busHasStoppedOnce = false;
     private bool busHasGoneOnce = false;
-    private Bus currentBus;
+    private BusTest currentBus;
     private string sollicitationToLog;
 
     public TicketMachine2 ticketMachine;
@@ -136,7 +136,7 @@ public class GameMaster : MonoBehaviour
                         // Before 60 seconds, only cars and busses other than the target bus
                         if (Random.Range(0, 2) == 0)
                         {
-                            currentBus = BusPrefabs[rangeOtherBuses[Random.Range(0, 7)]].GetComponent<Bus>();
+                            currentBus = BusPrefabs[rangeOtherBuses[Random.Range(0, 7)]].GetComponent<BusTest>();
                             currentBus.Initialize();
                         }
                         else
@@ -160,7 +160,7 @@ public class GameMaster : MonoBehaviour
                         busHasStoppedOnce = true;
                         if (Random.Range(0, 2) == 0)
                         {
-                            currentBus = BusPrefabs[rangeOtherBuses[Random.Range(0, 7)]].GetComponent<Bus>();
+                            currentBus = BusPrefabs[rangeOtherBuses[Random.Range(0, 7)]].GetComponent<BusTest>();
                             print("GameMaster currentBus " + currentBus.name);
                             //no bus comming after target bus
                             //currentBus.Initialize(); 
@@ -242,7 +242,7 @@ public class GameMaster : MonoBehaviour
     private int targetBusNumber;
     private int[] rangeOtherBuses;
 
-    private Bus targetBus;
+    private BusTest targetBus;
 
     private Sequence _currentSequence;
     private State _currentState;
@@ -287,7 +287,7 @@ public class GameMaster : MonoBehaviour
         targetBusNumber = Random.Range(0, 8);
         Debug.Log("[RIGHT BUS: " + targetBusNumber + "]");
 
-        targetBus = BusPrefabs[targetBusNumber].GetComponent<Bus>();
+        targetBus = BusPrefabs[targetBusNumber].GetComponent<BusTest>();
 
         // List of the other busses
         rangeOtherBuses = new int[7];
