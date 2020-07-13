@@ -19,11 +19,12 @@ namespace Lean.Localization
 	{
 		public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
 		{
-			var left  = position; left.xMax -= 40;
-			var right = position; right.xMin = left.xMax + 2;
-			var color = GUI.color;
+			var left   = position; left.xMax -= 40;
+			var right  = position; right.xMin = left.xMax + 2;
+			var color  = GUI.color;
+			var exists = LeanLocalization.CurrentTranslations.ContainsKey(property.stringValue);
 
-			if (LeanLocalization.CurrentTranslations.ContainsKey(property.stringValue) == false)
+			if (exists == false)
 			{
 				GUI.color = Color.red;
 			}
@@ -35,6 +36,28 @@ namespace Lean.Localization
 			if (GUI.Button(right, "List") == true)
 			{
 				var menu = new GenericMenu();
+
+				if (string.IsNullOrEmpty(property.stringValue) == false)
+				{
+					if (exists == true)
+					{
+						var translation = default(LeanTranslation);
+
+						if (LeanLocalization.CurrentTranslations.TryGetValue(property.stringValue, out translation) == true)
+						{
+							foreach (var entry in translation.Entries)
+							{
+								var owner = entry.Owner; menu.AddItem(new GUIContent("Select/" + entry.Language), false, () => { Selection.activeObject = owner; EditorGUIUtility.PingObject(owner); });
+							}
+						}
+					}
+					else
+					{
+						menu.AddItem(new GUIContent("Add: " + property.stringValue.Replace('/', '\\')), false, () => { var phrase = LeanLocalization.AddPhraseToFirst(property.stringValue); LeanLocalization.UpdateTranslations(); Selection.activeObject = phrase; EditorGUIUtility.PingObject(phrase); });
+					}
+
+					menu.AddItem(GUIContent.none, false, null);
+				}
 
 				foreach (var translationName in LeanLocalization.CurrentTranslations.Keys)
 				{

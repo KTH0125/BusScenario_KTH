@@ -51,7 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  translations:
+  data: 0
+  entries:
   - Language: English
     Text: Good Morning
     Object: {fileID: 0}

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Lean.Localization
 {
-	/// <summary>This component will update a UI.Text component with localized text, or use a fallback if none is found.</summary>
+	/// <summary>This component will update a <b>UI.Dropdown</b> component with localized text, or use a fallback if none is found.</summary>
 	[ExecuteInEditMode]
 	[DisallowMultipleComponent]
 	[RequireComponent(typeof(Dropdown))]

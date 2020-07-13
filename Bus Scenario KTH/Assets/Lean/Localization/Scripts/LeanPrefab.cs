@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace Lean.Localization
 {
+	/// <summary>This class stores a reference to an object (e.g. folder) in your project that contains LeanSource components so they can be registered.</summary>
 	[System.Serializable]
 	public class LeanPrefab
 	{
