@@ -1387,12 +1387,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "- \uD734\uB300\uC804\uD654\uC5D0 \uB3C4\uCC29\uD55C \uBA54\uC2DC\uC9C0\uB97C
-    \uD655\uC778\uD558\uC138\uC694.\r\n\r\n- \uBA54\uC2DC\uC9C0\uC5D0 \uAE30\uC7AC\uB41C
-    \uBAA9\uC801\uC9C0\uB97C \uD655\uC778\uD55C \uD6C4 \uC5ED\uC758 \uC9C0\uB3C4\uB97C
-    \uCC3E\uC73C\uC138\uC694.\r\n\r\n- \uC9C0\uB3C4\uC5D0\uC11C \uBAA9\uC801\uC9C0\uB97C
-    \uCC3E\uC740 \uD6C4 \uBAA9\uC801\uC9C0 \uC9C0\uC5ED \uBC0F \uBAA9\uC801\uC9C0\uAE4C\uC9C0\uC758
-    \uBC84\uC2A4 \uB178\uC120\uC744 \uD655\uC778\uD558\uC138\uC694."
+  m_Text: "- Check the message that arrived on your cell phone.\r\n\n- After checking
+    the destination written in the message, find the map of the station.\r\n\n- After
+    finding your destination on the map, check the destination area and the bus route
+    to your destination."
 --- !u!222 &353281303
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1617,7 +1615,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC2E4\uD5D8 \uAC00\uC774\uB4DC"
+  m_Text: Experiment Guide
 --- !u!222 &429255866
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1720,7 +1718,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 486597129}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: e4fa482f752d0024d8a6959427dc127d, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 73043aeb7f8e7b84fafb772ee5e9628b, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 865044675}
@@ -6105,7 +6103,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "1\uB2E8\uACC4"
+  m_Text: Step 1
 --- !u!222 &1528743526
 CanvasRenderer:
   m_ObjectHideFlags: 0
