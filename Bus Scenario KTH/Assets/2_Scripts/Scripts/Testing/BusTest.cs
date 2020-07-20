@@ -50,7 +50,7 @@ public class BusTest : MonoBehaviour
 
     public void Start()
     {
-        initialPos = transform.position;
+       /* initialPos = transform.position;
         /*playerLane = isInPlayerLane;*/
 
         /*if (playerLane)
@@ -62,9 +62,9 @@ public class BusTest : MonoBehaviour
         //{
         //    transform.position = new Vector3(-187.93f, GetComponent<Transform>().position.y, 110.14f);
         //    transform.eulerAngles = new Vector3(0f, 90f, 0f);
-        }*/
+        }
 
-        StartCoroutine("Arrive");
+        StartCoroutine("Arrive");*/
     }
 
     void Update()
