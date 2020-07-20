@@ -8652,6 +8652,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013837134108, guid: 5e6059195e3baa440b99b8e6d994f653,
+        type: 3}
+      propertyPath: action
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013837134108, guid: 5e6059195e3baa440b99b8e6d994f653,
+        type: 3}
+      propertyPath: hold
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e6059195e3baa440b99b8e6d994f653, type: 3}
 --- !u!4 &307012327 stripped
@@ -46425,7 +46435,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1801786501}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31487a1abad121c4abd8bf022b6c106a, type: 3}
   m_Name: 
@@ -46458,11 +46468,11 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  cameraPlayer: {fileID: 0}
-  left: {fileID: 0}
-  right: {fileID: 0}
-  Monitor: {fileID: 0}
-  ticketMachine: {fileID: 0}
+  cameraPlayer: {fileID: 310353491926003264}
+  left: {fileID: 310353491926100706}
+  right: {fileID: 310353491925999812}
+  Monitor: {fileID: 566273958}
+  ticketMachine: {fileID: 310353491925999816}
   userState: 0
   colliderTest: {fileID: 0}
 --- !u!114 &1801786504
@@ -46472,7 +46482,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1801786501}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbd255ceded88b44ca44718336e0859d, type: 3}
   m_Name: 

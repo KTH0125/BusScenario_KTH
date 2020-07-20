@@ -79,7 +79,7 @@ public class BusTest : MonoBehaviour
     /// <returns>Lanches <see cref="GameMaster" />'s BusArrival sequence before moving the bus, then starts <see cref="Bus.BusStop"/></returns>
     public IEnumerator Arrive()
     {
-       // GameMaster.Instance.CurrentSequence = Sequence.BusArrival;
+       GameMaster.Instance.CurrentSequence = Sequence.BusArrival;
 
         /*if (playerLane)
         {*/
@@ -126,7 +126,7 @@ public class BusTest : MonoBehaviour
     /// <returns>Lanches <see cref="GameMaster" />'s BusWait sequence before waiting 7 seconnds, then starts <see cref="Bus.Depart"/></returns>
 	public IEnumerator BusStop()
     {
-       // GameMaster.Instance.CurrentSequence = Sequence.BusWait;
+        GameMaster.Instance.CurrentSequence = Sequence.BusWait;
         yield return new WaitForSeconds(7f);
 
         StartCoroutine("Depart");
@@ -139,7 +139,7 @@ public class BusTest : MonoBehaviour
     /// <returns> Launches <see cref="GameMaster" />'s BusDeparture sequence before the bus moves and <seealso cref="GameMaster" />'s BusDestroy sequence after it has finished moving</returns>
 	public IEnumerator Depart()
     {
-      //  GameMaster.Instance.CurrentSequence = Sequence.BusDeparture;
+       GameMaster.Instance.CurrentSequence = Sequence.BusDeparture;
 
         /*if (playerLane)
         {*/
@@ -175,7 +175,7 @@ public class BusTest : MonoBehaviour
             transform.position = initialPos;
         }*/
 
-       // GameMaster.Instance.CurrentSequence = Sequence.VehicleDestory;
+        GameMaster.Instance.CurrentSequence = Sequence.VehicleDestory;
     }
 
 
