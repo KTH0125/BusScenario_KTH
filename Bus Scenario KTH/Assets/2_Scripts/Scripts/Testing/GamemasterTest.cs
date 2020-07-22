@@ -447,7 +447,7 @@ public class GamemasterTest : MonoBehaviour
         // controllerHitGrabObject.EndLog();
 
         //Logs all objects entered or exited by the collider
-        colliderTest.EndLog();
+        //colliderTest.EndLog();
 
         //commonDataLogger.EndLog();
         //Logs bus behavior and if player steps or not on target point
