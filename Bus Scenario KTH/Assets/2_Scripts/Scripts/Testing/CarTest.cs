@@ -47,11 +47,11 @@ public class CarTest : MonoBehaviour
         {
             //player lane
             //pre-turn
-           /* while (transform.position.z > 121.7f)
-            {
-                transform.Translate(0, 0, speed * Time.deltaTime, Space.World);
-                yield return null;
-            }*/
+            /* while (transform.position.z > 121.7f)
+             {
+                 transform.Translate(0, 0, speed * Time.deltaTime, Space.World);
+                 yield return null;
+             }*/
             //turn
             while (transform.position.x > 166.76f)
             {

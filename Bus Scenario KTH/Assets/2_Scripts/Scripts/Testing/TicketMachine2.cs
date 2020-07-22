@@ -31,6 +31,13 @@ public class TicketMachine2 : MonoBehaviour
     private string getTicket;
     private string selectZone;
 
+    private string btnZ1;
+    private string btnZ2;
+    private string btnZ3;
+    private string btnCB;
+    private string btnCR;
+    private string btnCG;
+
 
 
     private MeshRenderer cardValidMeshRenderer;
@@ -59,6 +66,7 @@ public class TicketMachine2 : MonoBehaviour
 
 
         ticket = GameObject.FindGameObjectWithTag("Ticket");
+        ticket.SetActive(false);
 
         InitializeCard();
 
@@ -89,6 +97,15 @@ public class TicketMachine2 : MonoBehaviour
         greenButtonColor = new Color32(28, 168, 0, 255);
         blackButtonColor = new Color32(24, 23, 18, 255);
 
+        btnZ1 = "VRZone1button";
+        btnZ2 = "VRZone2button";
+        btnZ3 = "VRZone3button";
+        btnCR = "VRRedButton";
+        btnCB = "VRBlueButton";
+        btnCG = "VRGreenButton";
+
+
+
     }
 
     // Update is called once per frame
@@ -117,39 +134,27 @@ public class TicketMachine2 : MonoBehaviour
         {
             case "selectZone":
 
-                if ((collider.gameObject.tag == "ZoneButton") && (collider.gameObject.name == "VRZone1button"))
-                {
-                    collider.GetComponent<Renderer>().material.color = Color.blue;
-                    print("z1_In");
-                }
-                else if ((collider.gameObject.tag == "ZoneButton") && (collider.gameObject.name == "VRZone2button"))
-                {
-                    collider.GetComponent<Renderer>().material.color = Color.blue;
-                    print("z2_In");
-                }
-                else if ((collider.gameObject.tag == "ZoneButton") && (collider.gameObject.name == "VRZone3button"))
-                {
-                    collider.GetComponent<Renderer>().material.color = Color.blue;
-                    print("z3_In");
-                }
+                collider.GetComponent<Renderer>().material.color = Color.blue;
+                print(collider.gameObject.name);
+
                 break;
 
             case "selectTicket":
-                if ((collider.gameObject.tag == "TicketButton") && (collider.gameObject.name == "VRBlueButton"))
+                if  ((collider.gameObject.name.Equals(btnCB)))
                 {
                     collider.GetComponent<Renderer>().material.color = Color.blue;
                     CardPaymentDisappear();
                     print("BT_In");
                     //DeActiveTicket();
                 }
-                else if ((collider.gameObject.tag == "TicketButton") && (collider.gameObject.name == "VRRedButton"))
+                else if ((collider.gameObject.name.Equals(btnCR)))
                 {
                     collider.GetComponent<Renderer>().material.color = Color.blue;
                     CardPaymentDisappear();
                     print("RT_In");
                     //DeActiveTicket();
                 }
-                else if ((collider.gameObject.tag == "TicketButton") && (collider.gameObject.name == "VRGreenButton"))
+                else if ((collider.gameObject.name.Equals(btnCG)))
                 {
                     collider.GetComponent<Renderer>().material.color = Color.blue;
                     CardPaymentDisappear();
@@ -195,26 +200,29 @@ public class TicketMachine2 : MonoBehaviour
         {
             case "selectZone":
 
-                    if ((collider.gameObject.tag == "ZoneButton") && (collider.gameObject.name == "VRZone1button"))
+                    if ((collider.gameObject.name.Equals(btnZ1)))
                     {
-                        collider.GetComponent<Renderer>().material.color = whiteButtonColor;
-                        zonetext.text = "Zone1";
-                        print("z1_Out");
+                    collider.GetComponent<Renderer>().material.color = whiteButtonColor;
+                    zone = "Zone1";
+                    print("z1_Out");
                      }
-                    else if ((collider.gameObject.tag == "ZoneButton") && (collider.gameObject.name == "VRZone2button"))
-                    {
-                        collider.GetComponent<Renderer>().material.color = whiteButtonColor;
-                        zonetext.text = "Zone2";
-                        print("z2_Out");
+                    else if ((collider.gameObject.name.Equals(btnZ2)))
+                {
+                    collider.GetComponent<Renderer>().material.color = whiteButtonColor;
+                    zone = "Zone2";
+                    //zonetext.text = "Zone2";
+                    print("z2_Out");
                     }
 
-                    else if ((collider.gameObject.tag == "ZoneButton") && (collider.gameObject.name == "VRZone3button"))
-                    {
-                        collider.GetComponent<Renderer>().material.color = whiteButtonColor;
-                        zonetext.text = "Zone3";
-                        print("z3_Out");
+                    else if ((collider.gameObject.name.Equals(btnZ2)))
+                {
+                    collider.GetComponent<Renderer>().material.color = whiteButtonColor;
+                    zone = "Zone3";
+                    //zonetext.text = "Zone3";
+                    print("z3_Out");
                     }
 
+                    zonetext.text = zone;
                     textScreen.text = zone + " sélectionné.\n" + "Choisissez un billet.";
                     caseSwitch = "selectTicket";
                                   
@@ -224,7 +232,7 @@ public class TicketMachine2 : MonoBehaviour
 
                 if (collider.gameObject.tag == "TicketButton")
                 {
-                    if (collider.gameObject.name == "VRBlueButton")
+                    if ((collider.gameObject.name.Equals(btnCB)))
                     {
                         tickettext.text = "Bleu";
                         ticketColor = "Ticket bleu";
@@ -233,7 +241,7 @@ public class TicketMachine2 : MonoBehaviour
                         print("BT_Out");
 
                     }
-                    else if (collider.gameObject.name == "VRRedButton")
+                    else if ((collider.gameObject.name.Equals(btnCR)))
                     {
                         tickettext.text = "Rouge";
                         ticketColor = "Ticket rouge";
@@ -243,7 +251,7 @@ public class TicketMachine2 : MonoBehaviour
 
                     }
 
-                    else if (collider.gameObject.name == "VRGreenButton")
+                    else if ((collider.gameObject.name.Equals(btnCG)))
                     {
                         tickettext.text = "Vert";
                         ticketColor = "Ticket vert";
@@ -349,7 +357,7 @@ public class TicketMachine2 : MonoBehaviour
         newTicket.GetComponent<Renderer>().material.color = getTicketColor();
 
         newTicket.SetActive(true);
-        newTicket.transform.position = new Vector3(67.2f, 2.33f, 121.22f);
+        newTicket.transform.position = new Vector3(72.5f, 2.3f, 112.9f);
         ticketMeshRenderer.enabled = true;
         print("4 TicketMachine sollicitationToLog : " + sollicitationToLog);
         sollicitationToLog += GlobalTime.globalTime + ", Vending machine, Distribue, " + ticketColor + "\n";

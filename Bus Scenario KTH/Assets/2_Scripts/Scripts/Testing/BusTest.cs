@@ -65,7 +65,7 @@ public class BusTest : MonoBehaviour
     /// <returns>Lanches <see cref="GamemasterTest" />'s BusArrival sequence before moving the bus, then starts <see cref="BusTest.BusStop"/></returns>
     public IEnumerator Arrive()
     {
-       GamemasterTest.Instance.CurrentSequence = Sequence1.BusArrival;
+        GamemasterTest.Instance.CurrentSequence = Sequence1.BusArrival;
 
         /*if (playerLane)
         {*/
@@ -125,12 +125,12 @@ public class BusTest : MonoBehaviour
     /// <returns> Launches <see cref="GamemasterTest" />'s BusDeparture sequence before the bus moves and <seealso cref="GamemasterTest" />'s BusDestroy sequence after it has finished moving</returns>
 	public IEnumerator Depart()
     {
-       GamemasterTest.Instance.CurrentSequence = Sequence1.BusDeparture;
+        GamemasterTest.Instance.CurrentSequence = Sequence1.BusDeparture;
 
         /*if (playerLane)
         {*/
         //player lane
-        while (transform.position.x > -187.93f)
+        while (transform.position.x < 161.1f)
         {
             transform.Translate(speed * Time.deltaTime, 0, 0, Space.World);
             yield return null;

@@ -167,7 +167,7 @@ public class GamemasterTest : MonoBehaviour
                         }
                         else
                         {
-                            CarPrefabs[Random.Range(0, 8)].GetComponent<Car>().Initialize((Random.Range(0, 2) == 1));
+                            CarPrefabs[i].GetComponent<CarTest>().Initialize((Random.Range(0, 2) == 1));
                         }
                     }
 
