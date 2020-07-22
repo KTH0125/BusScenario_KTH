@@ -292,7 +292,7 @@ public class TicketMachine2 : MonoBehaviour
                     print("2 TicketMachine sollicitationToLog : " + sollicitationToLog);
                     StartCoroutine(CardPaymentAppear());
                     print("VD_Out");
-
+                    caseSwitch = "payTicket";
                 }
 
                 break;
