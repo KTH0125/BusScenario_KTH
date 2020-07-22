@@ -85,7 +85,7 @@ public class Car : MonoBehaviour
             transform.position = initialPos;
         }
         
-        GameMaster.Instance.CurrentSequence = Sequence.VehicleDestory;
+        GamemasterTest.Instance.CurrentSequence = Sequence1.VehicleDestory;
 
     }
     

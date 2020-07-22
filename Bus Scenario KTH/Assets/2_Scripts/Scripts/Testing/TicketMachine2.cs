@@ -58,7 +58,7 @@ public class TicketMachine2 : MonoBehaviour
     {
 
 
-
+        ticket = GameObject.FindGameObjectWithTag("Ticket");
 
         InitializeCard();
 
@@ -208,7 +208,7 @@ public class TicketMachine2 : MonoBehaviour
                         print("z2_Out");
                     }
 
-                    else if ((collider.gameObject.tag == "ZoneButton") && (collider.gameObject.name == "VRZone3buttonn"))
+                    else if ((collider.gameObject.tag == "ZoneButton") && (collider.gameObject.name == "VRZone3button"))
                     {
                         collider.GetComponent<Renderer>().material.color = whiteButtonColor;
                         zonetext.text = "Zone3";
@@ -338,7 +338,7 @@ public class TicketMachine2 : MonoBehaviour
 
     private void ActiveTicket()
     {
-        ticket = GameObject.FindGameObjectWithTag("Ticket");
+        //ticket = GameObject.FindGameObjectWithTag("Ticket");
         GameObject newTicket = new GameObject();
 
         newTicket = ticket;
