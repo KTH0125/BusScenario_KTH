@@ -22,7 +22,12 @@ public class TicketMachine2 : MonoBehaviour
     public Text tickettext;//show the 'ticket' that user choosen
 
     private string ticketColor;
-    private string caseSwitch;
+    //private string caseSwitch;
+
+    private bool isZoneChosen;
+    private bool isColorChosen;
+    private bool isValidateChosen;
+
     private string playerName;
     private string zone;
     private string selectTicket;
@@ -40,19 +45,21 @@ public class TicketMachine2 : MonoBehaviour
 
     public GameObject creditcard;
 
+    public GameObject ticket;
+
     private MeshRenderer cardValidMeshRenderer;
     private MeshRenderer cardHolderMeshRenderer;
     private MeshRenderer cardNumberMeshRenderer;
     private MeshRenderer cardPlasticMeshRenderer;
 
-    private MeshRenderer ticketMeshRenderer;
+    //private MeshRenderer ticketMeshRenderer;
 
-    private GameObject ticket;
+    //private GameObject ticket;
 
-    public GameObject cardNumber;
-    public GameObject cardValid;
-    public GameObject cardHolder;
-    public GameObject cardPlastic;
+    //public GameObject cardNumber;
+    //public GameObject cardValid;
+    //public GameObject cardHolder;
+    //public GameObject cardPlastic;
 
 
 
@@ -65,7 +72,7 @@ public class TicketMachine2 : MonoBehaviour
     {
 
 
-        ticket = GameObject.FindGameObjectWithTag("Ticket");
+        //ticket = GameObject.FindGameObjectWithTag("Ticket");
         ticket.SetActive(false);
 
         InitializeCard();
@@ -84,12 +91,12 @@ public class TicketMachine2 : MonoBehaviour
 
 
 
-        caseSwitch = "";
-        selectTicket = "selectTicket";
-        validateTicket = "validateTicket";
-        payTicket = "payTicket";
-        getTicket = "getTicket";
-        selectZone = "selectZone";
+        //caseSwitch = "";
+        //selectTicket = "selectTicket";
+        //validateTicket = "validateTicket";
+        //payTicket = "payTicket";
+        //getTicket = "getTicket";
+        //selectZone = "selectZone";
 
         playerName = PlayerPrefs.GetString("name");
 
@@ -125,64 +132,57 @@ public class TicketMachine2 : MonoBehaviour
     /*****************************************************************/
     private void OnTriggerEnter(Collider collider)
     {
-        print(collider.gameObject.name);
-        if (collider.gameObject.tag == "ZoneButton")
+        string tag = collider.gameObject.tag;
+        //print(collider.gameObject.name);
+        //if (collider.gameObject.tag == "ZoneButton")
+        //{
+        //    caseSwitch = "selectZone";
+        //}
+
+        switch (tag)
         {
-            caseSwitch = "selectZone";
-        }
+            case "ZoneButton":
+                print("enter " + collider.gameObject.name);
 
-        switch (caseSwitch)
-        {
-            case "selectZone":
-                if (collider.gameObject.tag == "ZoneButton")
-                {
-                    print("enter " + collider.gameObject.name);
-
-                    collider.GetComponent<Renderer>().material.color = Color.blue;
-                    CardPaymentDisappear();
-
-                }
+                collider.GetComponent<Renderer>().material.color = Color.blue;
+                CardPaymentDisappear();
                 break;
 
-            case "selectTicket":
-                if ((collider.gameObject.tag == "TicketButton") && (collider.gameObject.name == "VRBlueButton"))
+            case "TicketButton":
+                if (collider.gameObject.name == "VRBlueButton")
                 {
                     collider.GetComponent<Renderer>().material.color = Color.blue;
                     ticketColor = "Ticket bleu";
                     CardPaymentDisappear();
-                    //DeActiveTicket();
 
                 }
-                else if ((collider.gameObject.tag == "TicketButton") && (collider.gameObject.name == "VRRedButton"))
+                else if (collider.gameObject.name == "VRRedButton")
                 {
 
                     collider.GetComponent<Renderer>().material.color = Color.blue;
                     ticketColor = "Ticket rouge";
                     CardPaymentDisappear();
-                    //DeActiveTicket();
 
                 }
-                else if ((collider.gameObject.tag == "TicketButton") && (collider.gameObject.name == "VRGreenButton"))
+                else if (collider.gameObject.name == "VRGreenButton")
                 {
 
                     collider.GetComponent<Renderer>().material.color = Color.blue;
                     ticketColor = "Ticket jaune";
                     CardPaymentDisappear();
-                    // DeActiveTicket();
-
                 }
                 break;
 
-            case "validateTicket":
-                if (collider.gameObject.tag == "ValidateButton")
+            case "ValidateButton":
+                if (isZoneChosen && isColorChosen)
                 {
                     collider.GetComponent<Renderer>().material.color = Color.cyan;
                     print("VD_In");
                 }
                 break;
 
-            case "payTicket":
-                if (collider.gameObject.tag == "TerminalPayment")
+            case "TerminalPayment":
+                if (isValidateChosen)
                 {
                     collider.GetComponent<Renderer>().material.color = Color.cyan;
                     //sollicitationToLog = new EventLog(playerName, "Insérer carte", "Borne de paiement");
@@ -205,9 +205,11 @@ public class TicketMachine2 : MonoBehaviour
 
     private void OnTriggerExit(Collider collider)
     {
-        switch (caseSwitch)
+        string tag = collider.gameObject.tag;
+
+        switch (tag)
         {
-            case "selectZone":
+            case "ZoneButton":
 
                 if (collider.gameObject.name == "VRZone1button")
                     {
@@ -225,59 +227,56 @@ public class TicketMachine2 : MonoBehaviour
                     print("z3_Out");
                 }
 
-                if (collider.gameObject.tag == "ZoneButton")
-                {
-                    print("debug " + this.gameObject.name);
-                    print("exit1 " + collider.gameObject.name);
-                    zonetext.text = zone;
-                    print("exit2 " + collider.gameObject.name);
-                    textScreen.text = zone + " sélectionné.\n" + "Choisissez un billet.";
-                    print("exit3 " + collider.gameObject.name);
-                    collider.GetComponent<Renderer>().material.color = whiteButtonColor;
-                    print("exit4 " + collider.gameObject.name);
+                print("debug " + this.gameObject.name);
+                print("exit1 " + collider.gameObject.name);
+                zonetext.text = zone;
+                print("exit2 " + collider.gameObject.name);
+                textScreen.text = zone + " sélectionné.\n" + "Choisissez un billet.";
+                print("exit3 " + collider.gameObject.name);
+                collider.GetComponent<Renderer>().material.color = whiteButtonColor;
+                print("exit4 " + collider.gameObject.name);
 
-                    caseSwitch = "selectTicket";
-                }
+                isZoneChosen = true;
 
+                    //caseSwitch = "selectTicket";
                 break;
 
-            case "selectTicket":
+            case "TicketButton":
 
-                if (collider.gameObject.tag == "TicketButton")
+                if ((collider.gameObject.name == "VRBlueButton"))
                 {
-                    if ((collider.gameObject.name == "VRBlueButton"))
-                    {
-                        tickettext.text = "Bleu";
-                        ticketColor = "Ticket bleu";
-                        collider.GetComponent<Renderer>().material.color = blueButtonColor;
-                        print("BT_Out");
+                    tickettext.text = "Bleu";
+                    ticketColor = "Ticket bleu";
+                    collider.GetComponent<Renderer>().material.color = blueButtonColor;
+                    print("BT_Out");
 
-                    }
-                    else if ((collider.gameObject.name == "VRRedButton"))
-                    {
-                        tickettext.text = "Rouge";
-                        ticketColor = "Ticket rouge";
-                        collider.GetComponent<Renderer>().material.color = redButtonColor;
-                        print("RT_Out");
-
-                    }
-
-                    else if ((collider.gameObject.name == "VRGreenButton"))
-                    {
-                        tickettext.text = "Vert";
-                        ticketColor = "Ticket vert";
-                        collider.GetComponent<Renderer>().material.color = greenButtonColor;
-                        print("GT_Out");
-
-                    }
-
-                    textScreen.text = ticketColor + " sélectionné.\n" + "Validez pour confirmer.";
-                    caseSwitch = "validateTicket";
                 }
+                else if ((collider.gameObject.name == "VRRedButton"))
+                {
+                    tickettext.text = "Rouge";
+                    ticketColor = "Ticket rouge";
+                    collider.GetComponent<Renderer>().material.color = redButtonColor;
+                    print("RT_Out");
+
+                }
+
+                else if ((collider.gameObject.name == "VRGreenButton"))
+                {
+                    tickettext.text = "Vert";
+                    ticketColor = "Ticket vert";
+                    collider.GetComponent<Renderer>().material.color = greenButtonColor;
+                    print("GT_Out");
+
+                }
+
+                textScreen.text = ticketColor + " sélectionné.\n" + "Validez pour confirmer.";
+                //caseSwitch = "validateTicket";
+                isColorChosen = true;
                 break;
 
-            case "validateTicket":
-                if (collider.gameObject.tag == "ValidateButton")
+            case "ValidateButton":
+                //if (collider.gameObject.tag == "ValidateButton")
+                if (isZoneChosen && isColorChosen)
                 {
                     textScreen.text = "Vous avez validé le " + ticketColor + ".\n" + "Procédez au paiement.";
 
@@ -285,13 +284,15 @@ public class TicketMachine2 : MonoBehaviour
                     print("2 TicketMachine sollicitationToLog : " + sollicitationToLog);
                     CardPaymentAppear();
                     print("VD_Out");
-                    caseSwitch = "payTicket";
+                    //caseSwitch = "payTicket";
+
+                    isValidateChosen = true;
                 }
 
                 break;
 
-            case "payTicket":
-                if (collider.gameObject.tag == "TerminalPayment")
+            case "TerminalPayment":
+                if (isValidateChosen)
                 {
                     CardPaymentDisappear();
 
@@ -301,6 +302,9 @@ public class TicketMachine2 : MonoBehaviour
                     print("PM_Out");
                     ActiveTicket();
 
+                    isZoneChosen = false;
+                    isColorChosen = false;
+                    isValidateChosen = false;
                 }
                 break;
             default:
@@ -325,7 +329,7 @@ public class TicketMachine2 : MonoBehaviour
         cardHolderLeft = GameObject.FindGameObjectWithTag("CreditCardHolderLeft");
         cardNumberLeft = GameObject.FindGameObjectWithTag("CreditCardNumberLeft");*/
 
-        print("right card name : " + cardPlastic.name);
+        //print("right card name : " + cardPlastic.name);
 
         //cardPlasticMeshRenderer = cardPlastic.GetComponent<MeshRenderer>();
         //cardValidMeshRenderer = cardValid.GetComponent<MeshRenderer>();
@@ -343,7 +347,7 @@ public class TicketMachine2 : MonoBehaviour
 
     private void DeActiveTicket()
     {
-        ticketMeshRenderer.enabled = false;
+        //ticketMeshRenderer.enabled = false;
         ticket.SetActive(false);
     }
 
@@ -355,18 +359,22 @@ public class TicketMachine2 : MonoBehaviour
     private void ActiveTicket()
     {
         //ticket = GameObject.FindGameObjectWithTag("Ticket");
-        GameObject newTicket = new GameObject();
+        GameObject newTicket = Instantiate(this.ticket) ;
+        newTicket.transform.parent = this.ticket.transform.parent;
+        newTicket.transform.position = this.ticket.transform.position;
+        newTicket.transform.localRotation = this.ticket.transform.localRotation;
+        newTicket.transform.localScale = this.ticket.transform.localScale;
+        
+        //newTicket = ticket;
 
-        newTicket = ticket;
-
-        ticketMeshRenderer = newTicket.GetComponent<MeshRenderer>();
+        MeshRenderer ticketMeshRenderer = newTicket.GetComponent<MeshRenderer>();
         //yield return new WaitForSeconds(3f);
 
         newTicket.GetComponent<Renderer>().material.color = getTicketColor();
 
         newTicket.SetActive(true);
-        newTicket.transform.position = new Vector3(72.5f, 2.3f, 112.9f);
-        ticketMeshRenderer.enabled = true;
+        //newTicket.transform.position = new Vector3(72.5f, 2.3f, 112.9f);
+        //ticketMeshRenderer.enabled = true;
         print("4 TicketMachine sollicitationToLog : " + sollicitationToLog);
         sollicitationToLog += GlobalTime.globalTime + ", Vending machine, Distribue, " + ticketColor + "\n";
 
@@ -381,7 +389,7 @@ public class TicketMachine2 : MonoBehaviour
 
     IEnumerator NewPaymentText()
     {
-        caseSwitch = "selectTicket";
+        //caseSwitch = "selectTicket";
         yield return new WaitForSeconds(5);
 
         paymentText.text = "Payez en touchant la borne.";
@@ -407,7 +415,7 @@ public class TicketMachine2 : MonoBehaviour
         //cardPlasticMeshRenderer.enabled = true;
         //cardNumberMeshRenderer.enabled = true;
 
-        caseSwitch = "payTicket";
+        //caseSwitch = "payTicket";
     }
 
 
