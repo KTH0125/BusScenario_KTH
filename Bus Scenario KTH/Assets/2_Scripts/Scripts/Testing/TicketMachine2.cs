@@ -451,6 +451,11 @@ public class TicketMachine2 : MonoBehaviour
         return ticketColor;
     }
 
+    public string getTicketZoneString()
+    {
+        return zone;
+    }
+
     /*****************************************************************/
 
     /*****************************************************************/

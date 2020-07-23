@@ -7,8 +7,7 @@ using UnityEngine;
 using System.IO;
 
 using System.Text;
-
-
+using System;
 
 public class BusTest : MonoBehaviour
 
@@ -163,7 +162,4 @@ public class BusTest : MonoBehaviour
 
         GamemasterTest.Instance.CurrentSequence = Sequence1.VehicleDestory;
     }
-
-
-
 }

@@ -25,6 +25,11 @@ public enum State1
     Initialize = 0, Memorize, Bus, Save
 }
 
+public enum Level
+{
+    Easy = 0, Normal, Hard
+}
+
 /// <summary>
 /// Script that manages the state of the game
 /// </summary>
@@ -46,17 +51,21 @@ public class GamemasterTest : MonoBehaviour
     public GameObject target;
 
     public GameObject correctObj;
-    public GameObject incorrectObj;
+    public GameObject incorrectObj1;
+    public GameObject incorrectObj2;
+    public GameObject incorrectObj3;
     public GameObject navigation;
     public GameObject answerShow;
     public List<GameObject> BusPrefabs;
     public List<GameObject> CarPrefabs;
-    public List<GameObject> MovableObjects;
+    //public List<GameObject> MovableObjects;
 
     public GameObject cameraPlayer;
     public GameObject left, right;
 
     public GameObject Monitor;
+    private string Zone;
+
 
     /// <summary>
     /// Manages the states of the game
@@ -79,6 +88,7 @@ public class GamemasterTest : MonoBehaviour
                 case State1.Memorize:
                     // Displays the target bus on the monitor
                     Monitor.SetActive(true);
+                    Zone = "Zone2";
                     string color = targetBus.color;
                     int busNum = targetBus.number;
                     string destination = targetBus.destination;
@@ -111,6 +121,8 @@ public class GamemasterTest : MonoBehaviour
     private bool busHasGoneOnce = false;
     private BusTest currentBus;
     private string sollicitationToLog;
+    private int InCorrectType;
+
 
     public TicketMachine2 ticketMachine;
 
@@ -130,11 +142,15 @@ public class GamemasterTest : MonoBehaviour
             {
                 case Sequence1.VehicleInitialize:
                     userSelect = false;
-
+                   
                     if (Time.time - startTime < 60f)
                     {
                         // Before 60 seconds, only cars and busses other than the target bus
-                        if (Random.Range(0, 2) == 0)
+
+                        currentBus = BusPrefabs[rangeOtherBuses[Random.Range(0, 2)]].GetComponent<BusTest>();
+                        currentBus.Initialize();
+
+                        /*if (Random.Range(0, 2) == 0)
                         {
                             currentBus = BusPrefabs[rangeOtherBuses[Random.Range(0, 2)]].GetComponent<BusTest>();
                             currentBus.Initialize();
@@ -142,8 +158,8 @@ public class GamemasterTest : MonoBehaviour
                         else
                         {
                             currentBus = null;
-                            CarPrefabs[Random.Range(0, 9)].GetComponent<Car>().Initialize((Random.Range(0, 2) == 1));
-                        }
+                            CarPrefabs[Random.Range(0, 9)].GetComponent<CarTest>().Initialize();
+                        }*/
 
                     }
                     else if (!busHasGoneOnce)
@@ -155,20 +171,23 @@ public class GamemasterTest : MonoBehaviour
                     }
                     else
                     {
-
                         // After the target bus has passed through once, all vehicles
                         busHasStoppedOnce = true;
-                        if (Random.Range(0, 2) == 0)
+
+                        currentBus = BusPrefabs[rangeOtherBuses[Random.Range(0, 2)]].GetComponent<BusTest>();
+                        print("GameMaster currentBus " + currentBus.name);
+
+                        /*if (Random.Range(0, 2) == 0)
                         {
-                            currentBus = BusPrefabs[rangeOtherBuses[Random.Range(0, 7)]].GetComponent<BusTest>();
+                            currentBus = BusPrefabs[rangeOtherBuses[Random.Range(0, 2)]].GetComponent<BusTest>();
                             print("GameMaster currentBus " + currentBus.name);
                             //no bus comming after target bus
                             //currentBus.Initialize(); 
                         }
                         else
                         {
-                            CarPrefabs[Random.Range(0,8)].GetComponent<CarTest>().Initialize((Random.Range(0, 2) == 1));
-                        }
+                            CarPrefabs[Random.Range(0,8)].GetComponent<CarTest>().Initialize();
+                        }*/
                     }
 
                     break;
@@ -187,23 +206,27 @@ public class GamemasterTest : MonoBehaviour
                     sollicitationToLog += GlobalTime.globalTime + ", Bus N° " + currentBus.number + ", s'éloigne de, Arrêt de bus\n";
                     bool correct = false;
                     // Target bus, user took it
-                    if (userSelect && currentBus.number == targetBus.number && (ticketMachine.getTicketColorString().Equals(targetBus.ticket))) //&& (ticketMachine.getTicketZoneString().Equals(destination.zone)) => TicketZoneString 추가 , Destination Zone 추가
+                    if (userSelect && currentBus.number == targetBus.number && (ticketMachine.getTicketColorString().Equals(targetBus.ticket)) && (ticketMachine.getTicketZoneString().Equals(Zone))) // => TicketZoneString 추가 , Destination Zone 추가
                     {
                         correct = true;
                         playerResultsData += GlobalTime.globalTime + "," + currentBus.number + "," + currentBus.color + "," + currentBus.destination + "," + currentBus.ticket + "," + targetBus.number + "," + targetBus.color + "," + targetBus.destination + "," + targetBus.ticket + ",Yes,\n";
                         Debug.Log("[CORRECT: bon bus, utilisateur l'a pris]");
                         print("GameMaster Ticket + bus correct : " + ticketMachine.getTicketColorString().Equals(targetBus.ticket));
                     }
+
+                    //InCorrectType : RB,WT = 0 / WB,RT = 1 / WB,WT = 2
                     //Right bus wrong ticket
-                    else if (userSelect && currentBus.number == targetBus.number && !(ticketMachine.getTicketColorString().Equals(targetBus.ticket))) //&& (ticketMachine.getTicketZoneString().Equals(destination.zone)) => TicketZoneString 추가, Destination Zone 추가
+                    else if (userSelect && currentBus.number == targetBus.number && !(ticketMachine.getTicketColorString().Equals(targetBus.ticket)) || !(ticketMachine.getTicketZoneString().Equals(Zone))) // => TicketZoneString 추가 , Destination Zone 추가
                     {
                         correct = false;
+                        InCorrectType = 0;
                         playerResultsData += GlobalTime.globalTime + "," + currentBus.number + "," + currentBus.color + "," + currentBus.destination + "," + currentBus.ticket + "," + targetBus.number + "," + targetBus.color + "," + targetBus.destination + "," + targetBus.ticket + ",No,\n";
                         Debug.Log("[OMISSION: bon bus mais mauvais ticket, utilisateur l'a pris]");
                         print("GameMaster Mauvais ticket + bus correct : " + ticketMachine.getTicketColorString().Equals(targetBus.ticket));
                     }
+
                     // Wrong bus, user did not take it
-                    else if (!userSelect && currentBus.number != targetBus.number)
+                    /*else if (!userSelect && currentBus.number != targetBus.number)
                     {
                         correct = true;
                         playerResultsData += GlobalTime.globalTime + "," + currentBus.number + "," + currentBus.color + "," + currentBus.destination + "," + currentBus.ticket + "," + targetBus.number + "," + targetBus.color + "," + targetBus.destination + "," + targetBus.ticket + ",Yes,\n";
@@ -215,13 +238,21 @@ public class GamemasterTest : MonoBehaviour
                         correct = false;
                         playerResultsData += GlobalTime.globalTime + "," + currentBus.number + "," + currentBus.color + "," + currentBus.destination + "," + currentBus.ticket + "," + targetBus.number + "," + targetBus.color + "," + targetBus.destination + "," + targetBus.ticket + ",No,\n";
                         Debug.Log("[OMMISSION: bon bus, utilisateur ne l'a pas pris]");
-                    }
-                    //  Wrong bus, user took it
+                    }*/
+
+                    //  Wrong bus, Right ticket, user took it
                     else if (userSelect && currentBus.number != targetBus.number)
                     {
                         correct = false;
+                        InCorrectType = 1;
                         playerResultsData += GlobalTime.globalTime + "," + currentBus.number + "," + currentBus.color + "," + currentBus.destination + "," + currentBus.ticket + "," + targetBus.number + "," + targetBus.color + "," + targetBus.destination + "," + targetBus.ticket + ",No,\n";
                         Debug.Log("[OMMISSION: mauvais bus, utilisateur l'a pris]");
+                    }
+
+                    else if (userSelect && currentBus.number != targetBus.number && !(ticketMachine.getTicketColorString().Equals(targetBus.ticket)) || !(ticketMachine.getTicketZoneString().Equals(Zone)))
+                    {
+                        correct = false;
+                        InCorrectType = 2;
                     }
 
                     StartCoroutine("ProblemFeedback", correct);
@@ -284,7 +315,8 @@ public class GamemasterTest : MonoBehaviour
         sollicitationToLog = "";
 
         // Seclection of the target bus
-        targetBusNumber = Random.Range(0, 3);
+        //targetBusNumber = Random.Range(0, 3);
+        targetBusNumber = 2;
         Debug.Log("[RIGHT BUS: " + targetBusNumber + "]");
 
         targetBus = BusPrefabs[targetBusNumber].GetComponent<BusTest>();
@@ -393,7 +425,21 @@ public class GamemasterTest : MonoBehaviour
         }
         else
         {
-            tmp = incorrectObj;
+
+            tmp = incorrectObj1;
+/*            if(!correct && InCorrectType == 0)
+            {
+                tmp = incorrectObj1;
+            }
+            else if (!correct && InCorrectType == 1)
+            {
+                tmp = incorrectObj2;
+            }
+            else if (!correct && InCorrectType == 2)
+            {
+                tmp = incorrectObj3;
+            }*/
+
         }
         tmp.SetActive(true);
         tmp.GetComponent<AudioSource>().Play();
@@ -401,8 +447,8 @@ public class GamemasterTest : MonoBehaviour
         tmp.SetActive(false);
         if (CurrentSequence == Sequence1.VehicleInitialize)
             navigation.SetActive(true);
-    }
 
+    }
 
     //data
     private bool userSelect = false;
@@ -414,11 +460,11 @@ public class GamemasterTest : MonoBehaviour
     {
 
         //Loges movable objects, cars, busses position and rotation
-        foreach (GameObject movableObject in MovableObjects)
+       /* foreach (GameObject movableObject in MovableObjects)
         {
             if (movableObject.activeSelf)
                 movableObject.GetComponent<MovableObjectLog>().EndLog();
-        }
+        }*/
 
         foreach (GameObject carObject in CarPrefabs)
         {
