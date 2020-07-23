@@ -187,7 +187,7 @@ public class GamemasterTest : MonoBehaviour
                     sollicitationToLog += GlobalTime.globalTime + ", Bus N° " + currentBus.number + ", s'éloigne de, Arrêt de bus\n";
                     bool correct = false;
                     // Target bus, user took it
-                    if (userSelect && currentBus.number == targetBus.number && (ticketMachine.getTicketColorString().Equals(targetBus.ticket)))
+                    if (userSelect && currentBus.number == targetBus.number && (ticketMachine.getTicketColorString().Equals(targetBus.ticket))) //&& (ticketMachine.getTicketZoneString().Equals(destination.zone)) => TicketZoneString 추가 , Destination Zone 추가
                     {
                         correct = true;
                         playerResultsData += GlobalTime.globalTime + "," + currentBus.number + "," + currentBus.color + "," + currentBus.destination + "," + currentBus.ticket + "," + targetBus.number + "," + targetBus.color + "," + targetBus.destination + "," + targetBus.ticket + ",Yes,\n";
@@ -195,7 +195,7 @@ public class GamemasterTest : MonoBehaviour
                         print("GameMaster Ticket + bus correct : " + ticketMachine.getTicketColorString().Equals(targetBus.ticket));
                     }
                     //Right bus wrong ticket
-                    else if (userSelect && currentBus.number == targetBus.number && !(ticketMachine.getTicketColorString().Equals(targetBus.ticket)))
+                    else if (userSelect && currentBus.number == targetBus.number && !(ticketMachine.getTicketColorString().Equals(targetBus.ticket))) //&& (ticketMachine.getTicketZoneString().Equals(destination.zone)) => TicketZoneString 추가, Destination Zone 추가
                     {
                         correct = false;
                         playerResultsData += GlobalTime.globalTime + "," + currentBus.number + "," + currentBus.color + "," + currentBus.destination + "," + currentBus.ticket + "," + targetBus.number + "," + targetBus.color + "," + targetBus.destination + "," + targetBus.ticket + ",No,\n";
