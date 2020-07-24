@@ -226,14 +226,14 @@ public class GamemasterTest : MonoBehaviour
                     }
 
                     // Wrong bus, user did not take it
-                    /*else if (!userSelect && currentBus.number != targetBus.number)
+                    else if (!userSelect && currentBus.number != targetBus.number)
                     {
                         correct = true;
                         playerResultsData += GlobalTime.globalTime + "," + currentBus.number + "," + currentBus.color + "," + currentBus.destination + "," + currentBus.ticket + "," + targetBus.number + "," + targetBus.color + "," + targetBus.destination + "," + targetBus.ticket + ",Yes,\n";
                         Debug.Log("[CORRECT: mauvais bus, utilisateur ne l'a pas pris]");
                     }
                     // Target bus, user did not take it
-                    else if (!userSelect && currentBus.number == targetBus.number)
+                    /*else if (!userSelect && currentBus.number == targetBus.number)
                     {
                         correct = false;
                         playerResultsData += GlobalTime.globalTime + "," + currentBus.number + "," + currentBus.color + "," + currentBus.destination + "," + currentBus.ticket + "," + targetBus.number + "," + targetBus.color + "," + targetBus.destination + "," + targetBus.ticket + ",No,\n";
@@ -426,19 +426,18 @@ public class GamemasterTest : MonoBehaviour
         else
         {
 
-            tmp = incorrectObj1;
-/*            if(!correct && InCorrectType == 0)
+            if (InCorrectType == 0)
             {
                 tmp = incorrectObj1;
             }
-            else if (!correct && InCorrectType == 1)
+            else if (InCorrectType == 1)
             {
                 tmp = incorrectObj2;
             }
-            else if (!correct && InCorrectType == 2)
+            else 
             {
                 tmp = incorrectObj3;
-            }*/
+            }
 
         }
         tmp.SetActive(true);
