@@ -246,7 +246,7 @@ public class TicketMachine2 : MonoBehaviour
                 if ((collider.gameObject.name == "VRBlueButton"))
                 {
                     tickettext.text = "Bleu";
-                    ticketColor = "Ticket bleu";
+                    ticketColor = "Bleu";
                     collider.GetComponent<Renderer>().material.color = blueButtonColor;
                     print("BT_Out");
 
@@ -254,7 +254,7 @@ public class TicketMachine2 : MonoBehaviour
                 else if ((collider.gameObject.name == "VRRedButton"))
                 {
                     tickettext.text = "Rouge";
-                    ticketColor = "Ticket rouge";
+                    ticketColor = "Rouge";
                     collider.GetComponent<Renderer>().material.color = redButtonColor;
                     print("RT_Out");
 
@@ -263,7 +263,7 @@ public class TicketMachine2 : MonoBehaviour
                 else if ((collider.gameObject.name == "VRGreenButton"))
                 {
                     tickettext.text = "Vert";
-                    ticketColor = "Ticket vert";
+                    ticketColor = "Vert";
                     collider.GetComponent<Renderer>().material.color = greenButtonColor;
                     print("GT_Out");
 
@@ -300,6 +300,7 @@ public class TicketMachine2 : MonoBehaviour
                     paymentText.text = "Paiement accepté.";
                     print("3 TicketMachine sollicitationToLog : " + sollicitationToLog);
                     print("PM_Out");
+                    print(zone + ticketColor);
                     ActiveTicket();
 
                     isZoneChosen = false;
@@ -467,15 +468,15 @@ public class TicketMachine2 : MonoBehaviour
         {
             color = whiteButtonColor;
         }*/
-        if (getTicketColorString().Equals("Ticket bleu"))
+        if (getTicketColorString().Equals("Bleu"))
         {
             color = blueButtonColor;
         }
-        else if (getTicketColorString().Equals("Ticket rouge"))
+        else if (getTicketColorString().Equals("Rouge"))
         {
             color = redButtonColor;
         }
-        else if (getTicketColorString().Equals("Ticket vert"))
+        else if (getTicketColorString().Equals("Vert"))
         {
             color = greenButtonColor;
         }
