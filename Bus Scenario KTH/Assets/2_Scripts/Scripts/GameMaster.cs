@@ -5,6 +5,7 @@ using TMPro;
 using System.IO;
 using System.Text;
 using UnityEngine.SceneManagement;
+using System;
 
 
 //Last version !!!!
@@ -109,7 +110,7 @@ public class GameMaster : MonoBehaviour
 
     private bool busHasStoppedOnce = false;
     private bool busHasGoneOnce = false;
-    private Bus currentBus;
+    private BusTest currentBus;
     private string sollicitationToLog;
 
     public TicketMachine2 ticketMachine;
@@ -134,15 +135,15 @@ public class GameMaster : MonoBehaviour
                     if (Time.time - startTime < 60f)
                     {
                         // Before 60 seconds, only cars and busses other than the target bus
-                        if (Random.Range(0, 2) == 0)
+                        if (UnityEngine.Random.Range(0, 2) == 0)
                         {
-                            currentBus = BusPrefabs[rangeOtherBuses[Random.Range(0, 7)]].GetComponent<Bus>();
+                            currentBus = BusPrefabs[rangeOtherBuses[UnityEngine.Random.Range(0, 7)]].GetComponent<BusTest>();
                             currentBus.Initialize();
                         }
                         else
                         {
                             currentBus = null;
-                            CarPrefabs[Random.Range(0, 9)].GetComponent<Car>().Initialize((Random.Range(0, 2) == 1));
+                            CarPrefabs[UnityEngine.Random.Range(0, 9)].GetComponent<Car>().Initialize((UnityEngine.Random.Range(0, 2) == 1));
                         }
 
                     }
@@ -158,16 +159,16 @@ public class GameMaster : MonoBehaviour
 
                         // After the target bus has passed through once, all vehicles
                         busHasStoppedOnce = true;
-                        if (Random.Range(0, 2) == 0)
+                        if (UnityEngine.Random.Range(0, 2) == 0)
                         {
-                            currentBus = BusPrefabs[rangeOtherBuses[Random.Range(0, 7)]].GetComponent<Bus>();
+                            currentBus = BusPrefabs[rangeOtherBuses[UnityEngine.Random.Range(0, 7)]].GetComponent<BusTest>();
                             print("GameMaster currentBus " + currentBus.name);
                             //no bus comming after target bus
                             //currentBus.Initialize(); 
                         }
                         else
                         {
-                            CarPrefabs[Random.Range(0, 8)].GetComponent<Car>().Initialize((Random.Range(0, 2) == 1));
+                            CarPrefabs[UnityEngine.Random.Range(0, 8)].GetComponent<Car>().Initialize((UnityEngine.Random.Range(0, 2) == 1));
                         }
                     }
 
@@ -242,7 +243,7 @@ public class GameMaster : MonoBehaviour
     private int targetBusNumber;
     private int[] rangeOtherBuses;
 
-    private Bus targetBus;
+    private BusTest targetBus;
 
     private Sequence _currentSequence;
     private State _currentState;
@@ -284,10 +285,10 @@ public class GameMaster : MonoBehaviour
         sollicitationToLog = "";
 
         // Seclection of the target bus
-        targetBusNumber = Random.Range(0, 8);
+        targetBusNumber = UnityEngine.Random.Range(0, 8);
         Debug.Log("[RIGHT BUS: " + targetBusNumber + "]");
 
-        targetBus = BusPrefabs[targetBusNumber].GetComponent<Bus>();
+        targetBus = BusPrefabs[targetBusNumber].GetComponent<BusTest>();
 
         // List of the other busses
         rangeOtherBuses = new int[7];
@@ -447,7 +448,7 @@ public class GameMaster : MonoBehaviour
        // controllerHitGrabObject.EndLog();
 
         //Logs all objects entered or exited by the collider
-        colliderTest.EndLog();
+        //colliderTest.EndLog();
 
         //commonDataLogger.EndLog();
         //Logs bus behavior and if player steps or not on target point
@@ -496,5 +497,8 @@ public class GameMaster : MonoBehaviour
         }
     }
 
-
+    public static implicit operator GameMaster(GamemasterTest v)
+    {
+        throw new NotImplementedException();
+    }
 }

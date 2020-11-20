@@ -10,6 +10,10 @@ public class Scenemanager : MonoBehaviour
     {
 
     }
+    public void OnClick0()
+    {
+        SceneManager.LoadScene("Intro");
+    }
 
     public void OnClick1()
     {

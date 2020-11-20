@@ -17,7 +17,7 @@ public class Bus  : MonoBehaviour{
     /*public bool playerLane;*/
 
     private Vector3 initialPos;
-	private Vector3 busStop=new Vector3(72.736f, 0f, 118.836f);
+	private Vector3 busStop=new Vector3(68.663f, 2.77f, 113f);
     /*private Vector3 otherBusStop=new Vector3(18.33f, 0f, 105.98f);*/
     private float speed=-17f;
    
@@ -30,7 +30,7 @@ public class Bus  : MonoBehaviour{
 
         /*if (playerLane)
           {*/
-        transform.position = new Vector3(172.61f, GetComponent<Transform>().position.y, 131.67f);
+        transform.position = new Vector3(-38.9f, GetComponent<Transform>().position.y, 183.1f);
             //transform.eulerAngles = new Vector3(0f, 180f, 0f);
         /*}
         //else

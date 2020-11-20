@@ -25,6 +25,7 @@ TagManager:
   - tickettext
   - ZoneButton
   - smartphone
+  - Message
   layers:
   - Default
   - TransparentFX
