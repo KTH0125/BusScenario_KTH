@@ -209,6 +209,7 @@ public class GamemasterTest : MonoBehaviour
                     if (userSelect && currentBus.number == targetBus.number && (ticketMachine.getTicketColorString().Equals(targetBus.ticket)) && (ticketMachine.getTicketZoneString().Equals(Zone))) // => TicketZoneString 추가 , Destination Zone 추가
                     {
                         correct = true;
+                        print("Correct");
                         playerResultsData += GlobalTime.globalTime + "," + currentBus.number + "," + currentBus.color + "," + currentBus.destination + "," + currentBus.ticket + "," + targetBus.number + "," + targetBus.color + "," + targetBus.destination + "," + targetBus.ticket + ",Yes,\n";
                         Debug.Log("[CORRECT: bon bus, utilisateur l'a pris]");
                         print("GameMaster Ticket + bus correct : " + ticketMachine.getTicketColorString().Equals(targetBus.ticket));
@@ -219,6 +220,7 @@ public class GamemasterTest : MonoBehaviour
                     else if (userSelect && currentBus.number == targetBus.number && !(ticketMachine.getTicketColorString().Equals(targetBus.ticket)) || !(ticketMachine.getTicketZoneString().Equals(Zone))) // => TicketZoneString 추가 , Destination Zone 추가
                     {
                         correct = false;
+                        print("RBWT");
                         InCorrectType = 0;
                         playerResultsData += GlobalTime.globalTime + "," + currentBus.number + "," + currentBus.color + "," + currentBus.destination + "," + currentBus.ticket + "," + targetBus.number + "," + targetBus.color + "," + targetBus.destination + "," + targetBus.ticket + ",No,\n";
                         Debug.Log("[OMISSION: bon bus mais mauvais ticket, utilisateur l'a pris]");
@@ -229,6 +231,7 @@ public class GamemasterTest : MonoBehaviour
                     else if (!userSelect && currentBus.number != targetBus.number)
                     {
                         correct = true;
+                        print("Correct 2");
                         playerResultsData += GlobalTime.globalTime + "," + currentBus.number + "," + currentBus.color + "," + currentBus.destination + "," + currentBus.ticket + "," + targetBus.number + "," + targetBus.color + "," + targetBus.destination + "," + targetBus.ticket + ",Yes,\n";
                         Debug.Log("[CORRECT: mauvais bus, utilisateur ne l'a pas pris]");
                     }
@@ -244,6 +247,7 @@ public class GamemasterTest : MonoBehaviour
                     else if (userSelect && currentBus.number != targetBus.number)
                     {
                         correct = false;
+                        print("WBRT");
                         InCorrectType = 1;
                         playerResultsData += GlobalTime.globalTime + "," + currentBus.number + "," + currentBus.color + "," + currentBus.destination + "," + currentBus.ticket + "," + targetBus.number + "," + targetBus.color + "," + targetBus.destination + "," + targetBus.ticket + ",No,\n";
                         Debug.Log("[OMMISSION: mauvais bus, utilisateur l'a pris]");
@@ -252,6 +256,7 @@ public class GamemasterTest : MonoBehaviour
                     else if (userSelect && currentBus.number != targetBus.number && !(ticketMachine.getTicketColorString().Equals(targetBus.ticket)) || !(ticketMachine.getTicketZoneString().Equals(Zone)))
                     {
                         correct = false;
+                        print("WBWT");
                         InCorrectType = 2;
                     }
 
@@ -356,6 +361,7 @@ public class GamemasterTest : MonoBehaviour
     bool oneTime3 = false;
 
     bool estDeboutTargetPoint = false;
+    bool userSelect = false;
 
     /// <summary>
     /// Update function
@@ -370,6 +376,7 @@ public class GamemasterTest : MonoBehaviour
             if (!userSelect && userState == 2)
             {
                 userSelect = true;
+                print("Select On");
             }
         }
         if (CurrentState == State1.Memorize)
@@ -429,14 +436,17 @@ public class GamemasterTest : MonoBehaviour
             if (InCorrectType == 0)
             {
                 tmp = incorrectObj1;
+                print("Error_RBWT");
             }
             else if (InCorrectType == 1)
             {
                 tmp = incorrectObj2;
+                print("Error_WBRT");
             }
             else 
             {
                 tmp = incorrectObj3;
+                print("Error_WBWT");
             }
 
         }
@@ -450,7 +460,7 @@ public class GamemasterTest : MonoBehaviour
     }
 
     //data
-    private bool userSelect = false;
+   // private bool userSelect = false;
 
     /// <summary>
     /// Stops the registering in text files
@@ -528,6 +538,7 @@ public class GamemasterTest : MonoBehaviour
         if (Vector2.Distance(new Vector2(target.transform.position.x, target.transform.position.z), new Vector2(cameraPlayer.transform.position.x, cameraPlayer.transform.position.z)) <= 0.414f)
         {
             userState = 2;
+            //print("Userstate 2");
             if (estDeboutTargetPoint == false)
                 sollicitationToLog += GlobalTime.globalTime + " " + playerName + ", est debout sur, Target Point\n";
             estDeboutTargetPoint = true;
